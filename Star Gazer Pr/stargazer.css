@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 35px;
+  background-color: rgb(15, 9, 94);;
+  color: #c8b9ff;
+  font-family: Elms sans;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  margin:0;
+  padding: 0;
+}
+
+.nav-links li a{
+  text-decoration: none;
+ color: #c8b9ff;
+ font-family: Elms sans;
+}
+
+.nav-links li a:hover{
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.scene-1{
+  min-height: 100vh;
+  background-image: url(https://i.pinimg.com/1200x/ce/ec/7b/ceec7b37e2146c165b9d0fab979cf7d3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.main-title{
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  margin-bottom: 20px;
+  font-family: Tangerine;
+  
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-top: 0px;
+  gap: 18px;
+}
+
+
+.star{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.star {
+  width: 85px;                 /* Set how wide you want the star */
+  height: 85px;                /* Set how tall you want the star */
+  fill: #ffffff;               /* Changes the star color to a vibrant yellow */
+  
+  /* Applies the spin rules */
+  animation: spin-animation 8s linear infinite; 
+}
+
+/* Define the 360-degree rotation loop */
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);    /* Start position */
+  }
+  100% {
+    transform: rotate(360deg);  /* End position (one full circle) */
+  }
+}
+
+
+.main-subtitle{
+  text-align: center;
+  color: white;
+  font-size: 20px; 
+  font-family: Elms sans;
+  margin-top: 50px;
+}
+  
+
+
+/*This is where the second page starts*/
+.scene-2 {
+  min-height: 100vh;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqdhpzSmqLIVIq3j6b_Jg4UUKFe8k-yLRMM8Sw7NHTA&s=10);
+  background-color: rgb(14, 13, 77);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*Top section of scene 2*/
+
+.scene-2-main-title{
+transform: translateY(50px);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  margin-bottom: 10px;
+  font-family: Tangerine;
+}
+
+.sparkle{
+    stroke: white;
+    stroke-width: 1;
+    animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.15);
+    }
+}
+
+
+.love-hate{
+  transform: translateY(30px);
+  text-align: center;
+  color: white;
+  font-size: 16px; 
+  font-family: Elms sans;
+}
+
+/*second section of scene 2*/
+.window-all{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding-top: 80px;
+}
+
+/*The icons inside of the window*/
+.icon-moon{
+    padding-bottom: 25px;
+}
+
+/*.icon-moon{
+    transform-origin: 50% 0%;
+    animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing{
+    0%{
+        transform: rotate(6deg);
+    }
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(4deg);
+    }
+    75%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(6deg);
+    }
+}*/
+
+/*Text and background color of the window*/
+.window{
+  width: 280px;
+  height: 500px;
+  border: 5px solid;
+  border-radius: 140px 140px 0 0;
+  border-color: #c8b9ff;
+  background-color: rgb(15, 9, 94);
+  color: #ffffff;
+  text-align: center;
+  font-family: Elms sans;
+  padding-top: 45px;
+  
+}
+
+/*Text input custonmization*/
+.text-area-1::placeholder{
+ color: white;
+ opacity: 0.8;
+ font-family: Elms sans;
+}
+
+.text-area-1:focus{
+    border-color: white;
+    box-shadow: 0 0 10px white;
+}
+
+.text-area-1{
+    width: 220px;
+    height: 280px;
+    margin-top: 30px;
+    background: transparent;
+    color: #c8b9ff;
+    font-size: 16px;
+    font-family: Elms sans;
+    
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    
+    outline: none;
+    resize: none;
+}
+
+/*indow appear animation*/
+.window-all{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 60%;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
